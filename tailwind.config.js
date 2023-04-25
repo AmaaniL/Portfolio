@@ -1,7 +1,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}",
+  "./node_modules/tw-elements/dist/js/**/*.js"],
   theme: {
     screens: {
 
@@ -10,5 +11,6 @@ module.exports = {
 
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms'),
+  require("tw-elements/dist/plugin.cjs")],
 }
