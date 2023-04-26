@@ -1,9 +1,11 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  content: ["./src/**/*.{html,js}",
+  content: ["./src/*.{html,js}",
   "./*.{html,js}",
-  "./node_modules/tw-elements/dist/js/**/*.js"],
+  "./node_modules/tw-elements/dist/js/**/*.js",
+  "./node_modules/flowbite/**/*.js"],
+  
   theme: {
     screens: {
 
@@ -12,6 +14,8 @@ module.exports = {
 
     },
   },
-  plugins: [require('@tailwindcss/forms'),
+  plugins: [
+  require('flowbite/plugin'),
   require("tw-elements/dist/plugin.cjs")],
+  darkMode: "class"
 }
