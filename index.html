@@ -42,17 +42,18 @@
 
     <main class="font-mono text-center">
       <div id="about">
-        <h1 class="text-5xl">Marieke Malfait</h1>
-        <h2 class="text-4xl">Web Developer/Java Programmer</h2>
+        <img class="w-52 h-52 rounded-full mx-auto" src="./src/img/profile.webp" alt="Rounded avatar">
+        <h1 class="text-5xl"> Marieke Malfait</h1>
+        <h2 class="text-4xl">Web Developer/Java Programmer based in Lievegem</h2>
       </div>
 
-      <div id="projects" class="my-10 flex flex-wrap h-auto bg-emerald-900 justify-evenly">
+      <div id="projects" class="mt-10 flex flex-wrap h-auto justify-evenly">
         <div
-          class="p-5 m-10 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          class="p-5 m-10 max-w-sm bg-white border border-emerald-700  shadow dark:bg-gray-800 dark:border-gray-700"
         >
           <a href="https://www.lievegem.be">
             <img
-              class="inline-flex items-center rounded-t-lg h-80"
+              class="inline-flex items-center lg h-80"
               src="./src/img/lievegem-website.png"
               alt="Website of Lievegem"
             />
@@ -70,7 +71,7 @@
             </p>
             <a
               href="https://www.lievegem.be/"
-              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-emerald-700 rounded-lg hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-emerald-700  hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"
             >
               See more
               <svg
@@ -90,11 +91,11 @@
           </div>
         </div>
         <div
-        class="p-5 m-10  max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="p-5 m-10  max-w-sm bg-white border border-emerald-700 shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <a href="https://kbov.be">
           <img
-            class="inline-flex items-center rounded-t-lg h-80"
+            class="inline-flex items-center  h-80"
             src="./src/img/kbov-website.png"
             alt="Website of the KBOV"
           />
@@ -112,7 +113,7 @@
           </p>
           <a
             href="https://www.kbov.be"
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-emerald-700 rounded-lg hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-emerald-700  hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"
           >
             See more
             <svg
@@ -133,24 +134,29 @@
       </div>
       </div>
 
-      <div id="contact" >
-        <form
-          action="javascript:location.href=('mail' + 'to' + ':malfait99' + '@gmail.com')"
-        >
-          <button class="text-emerald-900">Send me an email!</button>
-        </form>
-      </div>
+
     </main>
 
     <footer
-      class="bg-emerald-950 text-gray-100 uppercase text-center mt-5 py-5 "
+      class="bg-emerald-950 text-gray-100 uppercase text-center "
     >
+    <div id="contact" >
+      <form
+        action="javascript:location.href=('mail' + 'to' + ':malfait99' + '@gmail.com')"
+      >
+        <button class="font-mono">Send me an email         <i class="fa fa-envelope" aria-hidden="true"></i
+          >
+          
+        </button>
+      </form>
+    </div>
       <a class="px-3" href="https://www.linkedin.com/in/marieke-m-aa02b925a/">
+        Linkedin
         <i class="fa fa-linkedin" aria-hidden="true"></i
       ></a>
 
-      <a class="px-3" href="https://github.com/AmaaniL"
-        ><i class="fa fa-github" aria-hidden="true"></i
+      <a class="px-3" href="https://github.com/AmaaniL" >
+         Github <i class="fa fa-github" aria-hidden="true"></i
       ></a>
     </footer>
   </body>
