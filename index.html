@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -37,7 +36,7 @@
           both;
         animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
       }
-  
+
       @-webkit-keyframes slide-in-left {
         0% {
           -webkit-transform: translateX(-1000px);
@@ -64,7 +63,6 @@
       }
     </style>
   </head>
-  
 
   <body>
     <nav
@@ -79,45 +77,69 @@
 
     <main class="font-mono z-0">
       <div id="about" class="py-10">
-        <img id="avatar"
+        <img
+          id="avatar"
           class="w-52 h-52 rounded-full mx-auto mb-5"
           src="./src/img/profile.webp"
           alt="Rounded avatar"
         />
-        <h1 class="text-center text-5xl mb-5 font-black text-green-900" >Marieke Malfait</h1>
-        <h2 class=" text-center text-4xl text-green-700">
+        <h1 class="text-center text-5xl mb-5 font-black text-green-900">
+          Marieke Malfait
+        </h1>
+        <h2 class="text-center text-4xl text-green-700">
           Web Developer/Java Programmer based in Lievegem
         </h2>
-       
-
-       
       </div>
 
-      <div id="projects" class="w-screen flex flex-col justify-center space-y-5 mb-5">
+      <div
+        id="projects"
+        class="w-screen flex flex-col justify-center space-y-5 mb-5"
+      >
+        <div
+          id="card1"
+          class="mx-auto w-2/12 hover:w-6/12 font-extrabold text-center border-4 p-5 border-emerald-900"
+        >
+          <p class="text-xl">Website for the municipality of Lievegem</p>
+          <img
+            src="./src/img/lievegem-website.png"
+            alt="screenshot of the website lievegem.be"
+            class="h-5/6 py-5 grayscale hover:grayscale-0"
+          />
 
-<div id="card1" class="mx-auto w-2/12 hover:w-6/12 font-extrabold text-center border-4 p-5 border-emerald-900"> 
-  <p class="text-lg">Website for the municipality of Lievegem</p>
-  <img src="./src/img/lievegem-website.png" alt="screenshot of the website lievegem.be" class="h-5/6 py-5 grayscale hover:grayscale-0" >
+          <a
+            href="http://www.lievegem.be"
+            class="bg-green-800 text-white py-2 px-4 border rounded font-sans"
+            >See more</a
+          >
+        </div>
 
+        <div
+          id="card2"
+          class="mx-auto w-2/12 hover:w-6/12 font-extrabold text-center border-4 p-5 border-emerald-900 "
+        >
+          <p class="text-xl">
+            Website for the <br />
+            Koninklijke Bibliotheek van Oost-Vlaamse Volkskundigen
+          </p>
+          <img
+            src="./src/img/kbov-website.png"
+            alt="screenshot of the website lievegem.be"
+            class="h-5/6 py-5 grayscale hover:grayscale-0"
+          />
 
-  <a href="http://www.lievegem.be" class=" bg-green-800 text-white py-2 px-4 border rounded ">See more</a>
-
-</div>
-
-       
-<div id="card2" class="mx-auto w-2/12 hover:w-6/12 font-extrabold text-center border-4 p-5 border-emerald-900"> 
-  <p>Website for the <br> Koninklijke Bibliotheek van  Oost-Vlaamse Volkskundigen</p>
-  <img src="./src/img/kbov-website.png" alt="screenshot of the website lievegem.be" class="h-5/6 py-5 grayscale hover:grayscale-0" >
-
-
-  <a href="http://www.kbov.be" class=" bg-green-800 text-white py-2 px-4 border rounded ">See more</a>
-
-</div>
+          <a
+            href="http://www.kbov.be"
+            class="bg-green-800 text-white py-2 px-4 border rounded font-sans"
+            >See more</a
+          >
+        </div>
       </div>
     </main>
 
-    <footer class="bg-green-950 text-gray-100 uppercase text-center space-x-3 py-3" >
-      <div id="contact" >
+    <footer
+      class="bg-green-950 text-gray-100 uppercase text-center space-x-3 py-3"
+    >
+      <div id="contact">
         <form
           action="javascript:location.href=('mail' + 'to' + ':malfait99' + '@gmail.com')"
         >
@@ -125,16 +147,16 @@
             Send me an email <i class="fa fa-envelope" aria-hidden="true"></i>
           </button>
         </form>
-   
-      <a class="" href="https://www.linkedin.com/in/marieke-m-aa02b925a/">
-        Linkedin
-        <i class="fa fa-linkedin" aria-hidden="true"></i
-      ></a>
 
-      <a class="" href="https://github.com/AmaaniL">
-        Github <i class="fa fa-github" aria-hidden="true"></i
-      ></a>
-    </div>
+        <a class="" href="https://www.linkedin.com/in/marieke-m-aa02b925a/">
+          Linkedin
+          <i class="fa fa-linkedin" aria-hidden="true"></i
+        ></a>
+
+        <a class="" href="https://github.com/AmaaniL">
+          Github <i class="fa fa-github" aria-hidden="true"></i
+        ></a>
+      </div>
     </footer>
   </body>
 </html>
