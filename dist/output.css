@@ -1180,6 +1180,10 @@ input:checked + .toggle-bg {
   margin: 0px;
 }
 
+.m-3 {
+  margin: 0.75rem;
+}
+
 .\!my-0 {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
@@ -1198,6 +1202,21 @@ input:checked + .toggle-bg {
 .my-\[5px\] {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .-mt-3 {
@@ -1274,6 +1293,14 @@ input:checked + .toggle-bg {
 
 .mt-\[0\.15rem\] {
   margin-top: 0.15rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .box-border {
@@ -1460,6 +1487,31 @@ input:checked + .toggle-bg {
   height: 100vh;
 }
 
+.h-4\/6 {
+  height: 66.666667%;
+}
+
+.h-60 {
+  height: 15rem;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-40 {
+  height: 10rem;
+}
+
+.h-72 {
+  height: 18rem;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
 .max-h-\[calc\(100\%-64px\)\] {
   max-height: calc(100% - 64px);
 }
@@ -1620,6 +1672,19 @@ input:checked + .toggle-bg {
   width: 50%;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.w-10\/12 {
+  width: 83.333333%;
+}
+
+.w-4\/6 {
+  width: 66.666667%;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -1662,6 +1727,10 @@ input:checked + .toggle-bg {
 
 .max-w-full {
   max-width: 100%;
+}
+
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .flex-1 {
@@ -1943,12 +2012,28 @@ input:checked + .toggle-bg {
           appearance: none;
 }
 
+.grid-flow-dense {
+  grid-auto-flow: dense;
+}
+
+.grid-flow-row-dense {
+  grid-auto-flow: row dense;
+}
+
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .\!flex-row {
@@ -2019,6 +2104,12 @@ input:checked + .toggle-bg {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+.space-x-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-hidden {
@@ -2171,6 +2262,15 @@ input:checked + .toggle-bg {
   border-width: 14px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
+.border-y-4 {
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+}
+
 .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -2266,6 +2366,16 @@ input:checked + .toggle-bg {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-emerald-950 {
+  --tw-border-opacity: 1;
+  border-color: rgb(2 44 34 / var(--tw-border-opacity));
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .border-t-transparent {
@@ -2407,6 +2517,11 @@ input:checked + .toggle-bg {
 .bg-zinc-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
+}
+
+.bg-emerald-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 44 34 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50 {
@@ -2751,6 +2866,10 @@ input:checked + .toggle-bg {
   font-weight: 600;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -2972,6 +3091,11 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-green-800 {
+  --tw-text-opacity: 1;
+  color: rgb(3 84 63 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3390,6 +3514,15 @@ input:checked + .toggle-bg {
   display: none;
 }
 
+.hover\:h-auto:hover {
+  height: auto;
+}
+
+.hover\:h-fit:hover {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .hover\:w-6\/12:hover {
   width: 50%;
 }
@@ -3398,8 +3531,41 @@ input:checked + .toggle-bg {
   width: 58.333333%;
 }
 
+.hover\:w-10\/12:hover {
+  width: 83.333333%;
+}
+
+.hover\:w-full:hover {
+  width: 100%;
+}
+
+.hover\:w-12:hover {
+  width: 3rem;
+}
+
+.hover\:w-11\/12:hover {
+  width: 91.666667%;
+}
+
+.hover\:w-screen:hover {
+  width: 100vw;
+}
+
+.hover\:w-1\/2:hover {
+  width: 50%;
+}
+
+.hover\:w-fit:hover {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .hover\:cursor-pointer:hover {
   cursor: pointer;
+}
+
+.hover\:grid-cols-1:hover {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .hover\:rounded-\[50\%\]:hover {
