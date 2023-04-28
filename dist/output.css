@@ -1604,6 +1604,22 @@ input:checked + .toggle-bg {
   width: 100vw;
 }
 
+.w-4\/12 {
+  width: 33.333333%;
+}
+
+.w-3\/12 {
+  width: 25%;
+}
+
+.w-5\/12 {
+  width: 41.666667%;
+}
+
+.w-6\/12 {
+  width: 50%;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -2966,14 +2982,6 @@ input:checked + .toggle-bg {
   text-decoration-line: none;
 }
 
-.decoration-amber-300 {
-  text-decoration-color: #fcd34d;
-}
-
-.decoration-4 {
-  text-decoration-thickness: 4px;
-}
-
 .underline-offset-auto {
   text-underline-offset: auto;
 }
@@ -3384,6 +3392,10 @@ input:checked + .toggle-bg {
 
 .hover\:w-6\/12:hover {
   width: 50%;
+}
+
+.hover\:w-7\/12:hover {
+  width: 58.333333%;
 }
 
 .hover\:cursor-pointer:hover {
