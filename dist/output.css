@@ -998,6 +998,26 @@ input:checked + .toggle-bg {
   }
 }
 
+.code {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.code-blue {
+  background-color: #000000;
+  color: #66d9ef;
+}
+
+.code-red {
+  background-color: #000000;
+  color: #f92672;
+}
+
+.code-green {
+  background-color: #000000;
+  color: #a6e22e;
+}
+
 .pointer-events-none {
   pointer-events: none;
 }
@@ -1219,6 +1239,11 @@ input:checked + .toggle-bg {
   margin-bottom: 0px !important;
 }
 
+.mx-96 {
+  margin-left: 24rem;
+  margin-right: 24rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1259,6 +1284,10 @@ input:checked + .toggle-bg {
 
 .mb-1 {
   margin-bottom: 0.25rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .mb-2 {
@@ -2494,6 +2523,10 @@ input:checked + .toggle-bg {
   padding: 1rem;
 }
 
+.p-7 {
+  padding: 1.75rem;
+}
+
 .p-\[5px\] {
   padding: 5px;
 }
@@ -2691,6 +2724,11 @@ input:checked + .toggle-bg {
 
 .font-mono {
   font-family: ui-monospace, monospace;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-4xl {
@@ -4577,10 +4615,6 @@ input:checked + .toggle-bg {
 
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

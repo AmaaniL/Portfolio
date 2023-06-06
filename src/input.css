@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .code {
+    background-color: theme("colors.black");
+    color: theme("colors.white");
+  }
+  .code-blue {
+    background-color: theme("colors.black");
+    color: theme("colors.monokai.blue");
+  }
+  .code-red {
+    background-color: theme("colors.black");
+    color: theme("colors.monokai.red");
+  }
+  .code-green {
+    background-color: theme("colors.black");
+    color: theme("colors.monokai.green");
+  }
+}

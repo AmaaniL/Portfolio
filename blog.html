@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <title>Blog</title>
+  </head>
+  <body>
+    <article class="mx-96 font-mono">
+      <h1 class="mb-10 text-5xl font-black">Blog</h1>
+      <h2 class="mb-5 text-4xl">
+        How I used websockets to make a chat app in Java
+      </h2>
+      <h3 class="my-5 text-2xl">What are websockets?</h3>
+      <p>
+        WebSockets are a communication protocol that enables real-time, two-way
+        communication between a client (typically a web browser) and a server
+        over a single, long-lived connection. It provides a persistent
+        connection that allows both the client and the server to send data to
+        each other at any time without the need for the client to send a request
+        each time.
+      </p>
+      <h3 class="my-5 text-2xl">Why Websockets and not HTTP?</h3>
+      <p>
+        In HTTP goes in one direction. The client makes a request and the server
+        responds. With WebSockets both client and server can send a message to
+        the other. HTTP tends to be more resource intensive on servers.
+      </p>
+
+      <h3 class="my-5 text-2xl">How I used WebSockets with Java?</h3>
+      <p>
+        I used the Spring Websocket module because we were already using the
+        Spring framework in the project. I also used the STOMP (Simple Text
+        Oriented Messaging Protocol) messaging protocol which operates on top of
+        the lower-level Websocket. As a fallback option I used SockJS for
+        instances where WebSockets are not supported.
+      </p>
+
+      <h3 class="my-5 text-2xl">The backend code explained</h3>
+      <p>
+        I used the Spring Websocket module because we were already using the
+        Spring framework in the project. I also used the STOMP (Simple Text
+        Oriented Messaging Protocol) messaging protocol which operates on top of
+        the lower-level Websocket. As a fallback option I used SockJS for
+        instances where WebSockets are not supported.
+      </p>
+
+      <h3 class="my-5 text-2xl">The configuration</h3>
+      <p class="rounded-xl bg-black p-7 text-white">
+        @Configuration <br />
+        @EnableWebSocketMessageBroker <br />
+
+        <span class="code-blue">public class</span>
+        <span class="code-red">WebSocketConfig</span>
+        <span class="code-blue">implements</span>
+        <span class="code-red">WebSocketMessageBrokerConfigurer</span> {<br />
+        @Override <br />
+        <span class="code-blue">public void</span>
+        <span class="code-red">registerStompEndpoints</span
+        >(StompEndpointRegistry registry) {
+        <br />
+        registry.addEndpoint(<span class="code-green">"/ws"</span
+        >).setAllowedOriginPatterns(<span class="code-green">"*"</span
+        >).withSockJS(); } <br />
+        @Override <br />
+        <span class="code-blue">public void</span>
+        <span class="code-red">configureMessageBroker</span
+        >(MessageBrokerRegistry registry) {
+        <br />
+        registry.setApplicationDestinationPrefixes<span class="code-green"
+          >("/app"</span
+        >); <br />
+        registry.enableSimpleBroker(<span class="code-green"
+          >"/chatroom","/user"</span
+        >); <br />
+        registry.setUserDestinationPrefix(<span class="code-green">"/user"</span
+        >); <br />
+        } }
+      </p>
+    </article>
+  </body>
+</html>
