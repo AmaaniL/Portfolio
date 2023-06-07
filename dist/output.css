@@ -1018,6 +1018,14 @@ input:checked + .toggle-bg {
   color: #a6e22e;
 }
 
+strong {
+  color: #03543F;
+}
+
+#more {
+  display: none;
+}
+
 .pointer-events-none {
   pointer-events: none;
 }
@@ -1239,9 +1247,9 @@ input:checked + .toggle-bg {
   margin-bottom: 0px !important;
 }
 
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
+.mx-52 {
+  margin-left: 13rem;
+  margin-right: 13rem;
 }
 
 .mx-auto {
@@ -2717,6 +2725,10 @@ input:checked + .toggle-bg {
 
 .text-right {
   text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .align-middle {

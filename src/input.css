@@ -19,4 +19,11 @@
     background-color: theme("colors.black");
     color: theme("colors.monokai.green");
   }
+
+  strong {
+    color: theme("colors.green.800");
+  }
+  #more {
+    display: none;
+  }
 }
