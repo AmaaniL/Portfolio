@@ -7,15 +7,13 @@
     <link rel="stylesheet" href="./dist/output.css" />
     <title>Blog</title>
   </head>
-  <body class="flex flex-row">
-    <div
-      class="mx-10 h-auto basis-1/6 bg-green-950 px-10 py-5 font-mono text-white"
-    >
+  <body class="flex flex-col md:flex-row">
+    <div class="h-auto bg-green-950 px-10 py-5 font-mono text-white md:mx-10">
       <h3 class="mb-5 text-5xl font-black" id="websocket">Articles</h3>
       <a href="#websocket">- Websockets</a>
     </div>
 
-    <article class="basis-5/6 py-5 font-mono">
+    <article class="mx-10 py-5 font-mono">
       <h1 class="mb-10 text-5xl font-black">Blog</h1>
       <h2 class="mb-5 text-4xl" id="websocket">
         How I used websockets to make a chat app in Java
@@ -55,7 +53,7 @@
       </p>
 
       <h3 class="my-5 text-2xl">The configuration</h3>
-      <p class="rounded-xl bg-black p-7 text-white">
+      <p class="my-5 rounded-xl bg-black p-7 text-white">
         @Configuration <br />
         @EnableWebSocketMessageBroker <br />
 
@@ -85,6 +83,29 @@
         registry.setUserDestinationPrefix(<span class="code-green">"/user"</span
         >); <br />
         } }
+      </p>
+
+      <p>
+        The configureMessageBroker method is also overridden from the
+        WebSocketMessageBrokerConfigurer interface. It configures the message
+        broker, which handles message routing and broadcasting.
+        registry.setApplicationDestinationPrefixes("/app") sets the prefix for
+        messages that are bound for methods annotated with @MessageMapping on
+        the server side. In this case, messages sent to destinations starting
+        with /app will be routed to annotated message-handling methods.
+        registry.enableSimpleBroker("/chatroom", "/user") enables a simple
+        in-memory message broker. It specifies the prefixes for destinations
+        that the server can send messages to clients. Messages sent to
+        destinations starting with /chatroom will be broadcasted to all
+        connected clients, and messages sent to destinations starting with /user
+        will be targeted to individual users.
+        registry.setUserDestinationPrefix("/user") sets the prefix for
+        destinations that are used for direct user-to-user communication.
+        Messages sent to destinations starting with /user will be sent to
+        specific user destinations. Overall, this configuration class sets up
+        the necessary endpoints, message routing prefixes, and message broker
+        configuration for WebSocket communication using the STOMP protocol in
+        Spring.
       </p>
     </article>
   </body>
