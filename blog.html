@@ -8,9 +8,16 @@
     <script src="scripts.js"></script> 
     <title>Blog</title>
   </head>
+
   <body class="flex flex-col md:flex-row">
-    <div class="h-auto bg-green-950 px-10 py-5 font-mono text-white md:mx-10">
-      <h3 class="mb-5 text-5xl font-black" id="websocket">Articles</h3>
+
+  
+    <div class="h-auto bg-emerald-950 px-10 py-5 font-mono text-white md:mx-10">
+      <a href="./index.html">
+        <h3 class="mb-5 text-2xl font-black">Home</h3>
+      </a>
+
+      <h3 class=" text-2xl font-black">Articles</h3>
       <a href="#websocket">-Websockets</a>
     </div>
 
@@ -69,21 +76,21 @@
           <span class="code-red">registerStompEndpoints</span
           >(StompEndpointRegistry registry) {
           <br />
-          registry.addEndpoint(<span class="code-green">"/ws"</span
-          >).setAllowedOriginPatterns(<span class="code-green">"*"</span
+          registry.addEndpoint(<span class="code-emerald">"/ws"</span
+          >).setAllowedOriginPatterns(<span class="code-emerald">"*"</span
           >).withSockJS(); } <br />
           @Override <br />
           <span class="code-blue">public void</span>
           <span class="code-red">configureMessageBroker</span
           >(MessageBrokerRegistry registry) {
           <br />
-          registry.setApplicationDestinationPrefixes<span class="code-green"
+          registry.setApplicationDestinationPrefixes<span class="code-emerald"
             >("/app"</span
           >); <br />
-          registry.enableSimpleBroker(<span class="code-green"
+          registry.enableSimpleBroker(<span class="code-emerald"
             >"/chatroom","/user"</span
           >); <br />
-          registry.setUserDestinationPrefix(<span class="code-green">"/user"</span
+          registry.setUserDestinationPrefix(<span class="code-emerald">"/user"</span
           >); <br />
           } }
         </p>

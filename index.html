@@ -67,7 +67,7 @@
   <body>
     <nav
       id="home"
-      class="bg-green-950 text-gray-100 uppercase text-center sticky top-0 py-5 z-10 space-x-3"
+      class="sticky top-0 z-10 space-x-3 bg-emerald-950 py-5 text-center uppercase text-gray-100"
     >
       <a href="#home" class="">Home</a>
       <a href="#about" class="">About</a>
@@ -76,99 +76,79 @@
       <a href="#contact" class="">Contact</a>
     </nav>
 
-    <main class="font-mono h-z-0">
-      <div id="about" class="py-10 h-screen">
+    <main class="h-z-0 font-mono">
+      <div id="about" class="h-screen py-10">
         <img
           id="avatar"
-          class="w-52 h-52 rounded-full mx-auto mb-5"
+          class="mx-auto mb-5 h-52 w-52 rounded-full"
           src="./src/img/profile.webp"
           alt="Rounded avatar"
         />
-        <h1 class="text-center text-5xl mb-5 font-black text-green-900">
+        <h1 class="mb-5 text-center text-5xl font-black text-emerald-900">
           Marieke Malfait
         </h1>
-        <h2 class="text-center text-4xl text-green-700">
+        <h2 class="text-center text-4xl text-emerald-700">
           Web Developer/Java Programmer based in Lievegem
         </h2>
       </div>
       <h2
-        class="text-center text-4xl text-black mb-8 border-y-4 font-bold border-emerald-900 py-3 my-6"
+        class="my-6 mb-8 border-y-4 border-emerald-900 py-3 text-center text-4xl font-bold text-black"
       >
         Projects
       </h2>
       <div
         id="projects"
-        class="lg:grid lg:grid-cols-2 mb-5 z-1 overflow-hidden"
+        class="z-1 mb-5 overflow-hidden lg:grid lg:grid-cols-3"
       >
         <div
           id="card1"
-          class="mx-auto m-5 w-10/12 pb-5 font-bold text-center bg-emerald-950 text-white"
+          class="m-5 mx-auto w-10/12 bg-emerald-950 pb-5 text-center font-bold text-white"
         >
           <p class="text-l m-3">Todo app</p>
           <img
             src="./src/img/todo.png"
             alt="screenshot of todo app "
-            class="mx-auto w-4/6 h-5/6 py-5 hover:scale-150"
+            class="mx-auto h-5/6 w-4/6 py-5 hover:scale-150"
           />
 
           <a
             href="https://github.com/AmaaniL/Todo-app"
-            class="bg-green-50 text-green-800 font-normal mt-5 py-2 px-3 border rounded"
+            class="mt-5 rounded border bg-emerald-50 px-3 py-2 font-normal text-emerald-800"
             >See code</a
           >
         </div>
         <div
           id="card2"
-          class="mx-auto m-5 w-10/12 pb-5 font-bold text-center bg-emerald-950 text-green-50"
+          class="m-5 mx-auto w-10/12 bg-emerald-950 pb-5 text-center font-bold text-emerald-50"
         >
-          <p class="text-l m-3">Website for the municipality of Lievegem</p>
+          <p class="text-l m-3">Chat app made with Java and React</p>
           <img
-            src="./src/img/lievegem-website.png"
-            alt="screenshot of the website lievegem.be"
-            class="mx-auto w-4/6 h-5/6 py-5 hover:scale-150"
+            src="./src/img/chatapp.png"
+            alt="screenshot of the chat app"
+            class="mx-auto h-5/6 w-4/6 py-5 hover:scale-150"
           />
 
           <a
-            href="http://www.lievegem.be"
-            class="bg-green-50 text-green-800 font-normal my-5 py-2 px-3 border rounded"
-            >See more</a
-          >
-        </div>
-
-        <div
-          id="card3"
-          class="mx-auto m-5 w-10/12 pb-5 font-bold text-center bg-emerald-950 text-green-50"
-        >
-          <p class="text-l m-3">
-            Website for the Koninklijke Bond der Oost-Vlaamse Volkskundigen
-          </p>
-          <img
-            src="./src/img/kbov-website.png"
-            alt="screenshot of the website lievegem.be"
-            class="mx-auto w-4/6 h-5/6 py-5 hover:scale-150"
-          />
-
-          <a
-            href="http://www.kbov.be"
-            class="bg-green-50 text-green-800 font-normal mt-5 py-2 px-3 border rounded"
-            >See more</a
+            href="https://github.com/AmaaniL/Chat"
+            class="my-5 rounded border bg-emerald-50 px-3 py-2 font-normal text-emerald-800"
+            >See code</a
           >
         </div>
 
         <div
           id="card4"
-          class="mx-auto m-5 w-10/12 pb-5 font-bold text-center bg-emerald-950 text-white"
+          class="m-5 mx-auto w-10/12 bg-emerald-950 pb-5 text-center font-bold text-white"
         >
-          <p class="text-l m-3">Todo app</p>
+          <p class="text-l m-3">CLI Hospital regsitration app</p>
           <img
-            src="./src/img/todo.png"
-            alt="screenshot of todo app "
-            class="mx-auto w-4/6 h-5/6 py-5 hover:scale-150"
+            src="./src/img/register.png"
+            alt="screenshot of registration app "
+            class="mx-auto h-5/6 w-4/6 py-5 hover:scale-150"
           />
 
           <a
-            href="https://github.com/AmaaniL/Todo-app"
-            class="bg-green-50 text-green-800 font-normal mt-5 py-2 px-3 border rounded"
+            href="https://github.com/AmaaniL/hospitalregistration"
+            class="mt-5 rounded border bg-emerald-50 px-3 py-2 font-normal text-emerald-800"
             >See code</a
           >
         </div>
@@ -176,13 +156,13 @@
     </main>
 
     <footer
-      class="bg-green-950 text-gray-100 uppercase text-center space-x-3 py-3"
+      class="space-x-3 bg-emerald-950 py-3 text-center uppercase text-gray-100"
     >
       <div id="contact">
         <form
           action="javascript:location.href=('mail' + 'to' + ':malfait99' + '@gmail.com')"
         >
-          <a class="font-mono my-3 px-5 text-lg font-extrabold border-y-4">
+          <a class="my-3 border-y-4 px-5 font-mono text-lg font-extrabold">
             <i class="fa fa-envelope" aria-hidden="true"></i> Let's talk
             <i class="fa fa-envelope" aria-hidden="true"></i>
           </a>
