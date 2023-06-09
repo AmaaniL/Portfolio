@@ -5,24 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./dist/output.css" />
-    <script src="scripts.js"></script> 
+    <link rel="stylesheet" href="./src/prism.css" />
+
     <title>Blog</title>
   </head>
 
   <body class="flex flex-col md:flex-row">
+    <script src="scripts.js"></script>
+    <script src="./src/prism.js"></script>
 
-  
     <div class="h-auto bg-emerald-950 px-10 py-5 font-mono text-white md:mx-10">
       <a href="./index.html">
         <h3 class="mb-5 text-2xl font-black">Home</h3>
       </a>
 
-      <h3 class=" text-2xl font-black">Articles</h3>
+      <h3 class="text-2xl font-black">Articles</h3>
       <a href="#websocket">-Websockets</a>
     </div>
 
-    <article class="mx-52 py-5 font-mono text-justify">
+    <article class="mx-52 py-5 text-justify font-mono">
       <h1 class="mb-10 text-5xl font-black">Blog</h1>
+
       <h2 class="mb-5 text-4xl" id="websocket">
         How I used websockets to make a chat app in Java
       </h2>
@@ -36,92 +39,86 @@
         each time.
       </p>
 
-
-      <span id="dots">...</span><span id="more"> <h3 class="my-5 text-2xl">Why Websockets and not HTTP?</h3>
+      <span id="dots">...</span>
+      <div id="more">
+        <h3 class="my-5 text-2xl">Why Websockets and not HTTP?</h3>
         <p>
-          In HTTP goes in one direction. The client makes a request and the server
-          responds. With WebSockets both client and server can send a message to
-          the other. HTTP tends to be more resource intensive on servers.
+          In HTTP goes in one direction. The client makes a request and the
+          server responds. With WebSockets both client and server can send a
+          message to the other. HTTP tends to be more resource intensive on
+          servers.
         </p>
-  
+
         <h3 class="my-5 text-2xl">How I used WebSockets with Java?</h3>
         <p>
           I used the Spring Websocket module because we were already using the
           Spring framework in the project. I also used the STOMP (Simple Text
-          Oriented Messaging Protocol) messaging protocol which operates on top of
-          the lower-level Websocket. As a fallback option I used SockJS for
+          Oriented Messaging Protocol) messaging protocol which operates on top
+          of the lower-level Websocket. As a fallback option I used SockJS for
           instances where WebSockets are not supported.
         </p>
-  
+
         <h3 class="my-5 text-2xl">The backend code explained</h3>
         <p>
           I used the Spring Websocket module because we were already using the
           Spring framework in the project. I also used the STOMP (Simple Text
-          Oriented Messaging Protocol) messaging protocol which operates on top of
-          the lower-level Websocket. As a fallback option I used SockJS for
+          Oriented Messaging Protocol) messaging protocol which operates on top
+          of the lower-level Websocket. As a fallback option I used SockJS for
           instances where WebSockets are not supported.
         </p>
-  
+
         <h3 class="my-5 text-2xl">The configuration</h3>
-        <p class="my-5 rounded-xl bg-black p-7 text-white">
-          @Configuration <br />
-          @EnableWebSocketMessageBroker <br />
-  
-          <span class="code-blue">public class</span>
-          <span class="code-red">WebSocketConfig</span>
-          <span class="code-blue">implements</span>
-          <span class="code-red">WebSocketMessageBrokerConfigurer</span> {<br />
-          @Override <br />
-          <span class="code-blue">public void</span>
-          <span class="code-red">registerStompEndpoints</span
-          >(StompEndpointRegistry registry) {
-          <br />
-          registry.addEndpoint(<span class="code-emerald">"/ws"</span
-          >).setAllowedOriginPatterns(<span class="code-emerald">"*"</span
-          >).withSockJS(); } <br />
-          @Override <br />
-          <span class="code-blue">public void</span>
-          <span class="code-red">configureMessageBroker</span
-          >(MessageBrokerRegistry registry) {
-          <br />
-          registry.setApplicationDestinationPrefixes<span class="code-emerald"
-            >("/app"</span
-          >); <br />
-          registry.enableSimpleBroker(<span class="code-emerald"
-            >"/chatroom","/user"</span
-          >); <br />
-          registry.setUserDestinationPrefix(<span class="code-emerald">"/user"</span
-          >); <br />
-          } }
-        </p>
-  
-        <br>
+        <pre>
+          <code class="language-java">
+        @Configuration
+        @EnableWebSocketMessageBroker
+
+        public class WebSocketConfig implements
+
+            WebSocketMessageBrokerConfigurer {
+            @Override 
+            public void >registerStompEndpoints >(StompEndpointRegistry registry)
+            {
+            
+            registry.addEndpoint("/ws" >).setAllowedOriginPatterns("*"
+            ).withSockJS(); } 
+            @Override 
+            public void >configureMessageBroker (MessageBrokerRegistry registry)
+            {
+            
+            registry.setApplicationDestinationPrefixes ("/app" ); 
+            registry.enableSimpleBroker( "/chatroom","/user" ); 
+            registry.setUserDestinationPrefix("/user"); 
+            } }
+            <br
+          /></code>
+        </pre>
+        <p>
           The <strong>configureMessageBroker</strong> method configures the
-          message broker, which handles message routing and broadcasting. </br>
-          <strong>registry.setApplicationDestinationPrefixes("/app")</strong> sets
-          the prefix for messages that are bound for methods annotated with
+          message broker, which handles message routing and broadcasting. <br />
+          <strong>registry.setApplicationDestinationPrefixes("/app")</strong>
+          sets the prefix for messages that are bound for methods annotated with
           <strong>@MessageMapping </strong>on the server side. In this case,
           messages sent to destinations starting with <strong>/app </strong>will
-          be routed to annotated message-handling methods. </br>
+          be routed to annotated message-handling methods. <br />
           <strong> registry.enableSimpleBroker("/chatroom", "/user") </strong>
-          enables a simple in-memory message broker. It specifies the prefixes for
-          destinations that the server can send messages to clients. Messages sent
-          to destinations starting with <strong>/chatroom </strong>will be
-          broadcasted to all connected clients, and messages sent to destinations
-          starting with /user will be targeted to individual users. </br>
+          enables a simple in-memory message broker. It specifies the prefixes
+          for destinations that the server can send messages to clients.
+          Messages sent to destinations starting with
+          <strong>/chatroom </strong>will be broadcasted to all connected
+          clients, and messages sent to destinations starting with /user will be
+          targeted to individual users. <br />
           <strong>registry.setUserDestinationPrefix("/user")</strong> sets the
           prefix for destinations that are used for direct user-to-user
           communication. Messages sent to destinations starting with
-          <strong>/user</strong> will be sent to specific user destinations. </br>
-         This configuration class sets up the necessary endpoints,
-          message routing prefixes, and message broker configuration for WebSocket
+          <strong>/user</strong> will be sent to specific user destinations.
+          <br />
+          This configuration class sets up the necessary endpoints, message
+          routing prefixes, and message broker configuration for WebSocket
           communication using the STOMP protocol in Spring.
         </p>
-  </span></p> <button onclick="myFunction()" id="myBtn">Read more</button>
-
-
-     
-      
+      </div>
+      <button onclick="myFunction()" id="myBtn">Read more</button>
     </article>
   </body>
 </html>
