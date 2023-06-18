@@ -1003,21 +1003,6 @@ input:checked + .toggle-bg {
   color: #ffffff;
 }
 
-.code-blue {
-  background-color: #000000;
-  color: #66d9ef;
-}
-
-.code-red {
-  background-color: #000000;
-  color: #f92672;
-}
-
-.code-green {
-  background-color: #000000;
-  color: #a6e22e;
-}
-
 strong {
   color: #03543F;
 }
@@ -2524,10 +2509,6 @@ strong {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-7 {
-  padding: 1.75rem;
 }
 
 .p-\[5px\] {

@@ -94,24 +94,24 @@
           /></code>
         </pre>
         <p>
-          The <strong>configureMessageBroker</strong> method configures the
+          The <strong>configureMessageBrokermethod</strong> configures the
           message broker, which handles message routing and broadcasting. <br />
           <strong>registry.setApplicationDestinationPrefixes("/app")</strong>
           sets the prefix for messages that are bound for methods annotated with
           <strong>@MessageMapping </strong>on the server side. In this case,
-          messages sent to destinations starting with <strong>/app </strong>will
-          be routed to annotated message-handling methods. <br />
-          <strong> registry.enableSimpleBroker("/chatroom", "/user") </strong>
-          enables a simple in-memory message broker. It specifies the prefixes
+          messages sent to destinations starting with appwill be routed to
+          annotated message-handling methods. <br />
+          <strong>registry.enableSimpleBroker("/chatroom", "/user") </strong
+          >enables a simple in-memory message broker. It specifies the prefixes
           for destinations that the server can send messages to clients.
-          Messages sent to destinations starting with
-          <strong>/chatroom </strong>will be broadcasted to all connected
-          clients, and messages sent to destinations starting with /user will be
-          targeted to individual users. <br />
-          <strong>registry.setUserDestinationPrefix("/user")</strong> sets the
+          Messages sent to destinations starting with chatroom will be
+          broadcasted to all connected clients, and messages sent to
+          destinations starting with <strong>/user</strong> will be targeted to
+          individual users. <br />
+          <strong>registry.setUserDestinationPrefix("/user")</strong>sets the
           prefix for destinations that are used for direct user-to-user
-          communication. Messages sent to destinations starting with
-          <strong>/user</strong> will be sent to specific user destinations.
+          communication. Messages sent to destinations starting with user will
+          be sent to specific user destinations.
           <br />
           This configuration class sets up the necessary endpoints, message
           routing prefixes, and message broker configuration for WebSocket
