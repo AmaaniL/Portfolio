@@ -4,24 +4,20 @@
 
 @layer components {
   .code {
-    background-color: theme("colors.black");
-    color: theme("colors.white");
+    @apply bg-black text-white;
   }
   .code-blue {
-    background-color: theme("colors.black");
-    color: theme("colors.monokai.blue");
+    @apply bg-black text-monokai-blue;
   }
   .code-red {
-    background-color: theme("colors.black");
-    color: theme("colors.monokai.red");
+    @apply bg-black text-monokai-red;
   }
   .code-green {
-    background-color: theme("colors.black");
-    color: theme("colors.monokai.green");
+    @apply bg-black text-monokai-green;
   }
 
   strong {
-    color: theme("colors.green.800");
+    @apply text-green-800;
   }
   #more {
     display: none;

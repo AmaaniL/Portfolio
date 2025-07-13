@@ -30,43 +30,12 @@
     />
     <title>Marieke Malfait</title>
 
-    <style>
-      #about {
-        -webkit-animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-          both;
-        animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-      }
-
-      @-webkit-keyframes slide-in-left {
-        0% {
-          -webkit-transform: translateX(-1000px);
-          transform: translateX(-1000px);
-          opacity: 0;
-        }
-        100% {
-          -webkit-transform: translateX(0);
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-      @keyframes slide-in-left {
-        0% {
-          -webkit-transform: translateX(-1000px);
-          transform: translateX(-1000px);
-          opacity: 0;
-        }
-        100% {
-          -webkit-transform: translateX(0);
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-    </style>
+    
   </head>
 
   <body>
     <nav
-      id="home"
+      id="main-nav"
       class="sticky top-0 z-10 space-x-3 bg-emerald-950 py-5 text-center uppercase text-gray-100"
     >
       <a href="#home" class="">Home</a>
@@ -76,8 +45,8 @@
       <a href="#contact" class="">Contact</a>
     </nav>
 
-    <main class="h-z-0 font-mono">
-      <div id="about" class="h-screen py-10">
+    <main class="z-0 font-mono">
+      <div id="about" class="h-screen py-10 animate-slideInLeft">
         <img
           id="avatar"
           class="mx-auto mb-5 h-52 w-52 rounded-full"
@@ -114,7 +83,7 @@
           <a
             href="https://github.com/AmaaniL/Todo-app"
             class="mt-5 rounded border bg-emerald-50 px-3 py-2 font-normal text-emerald-800"
-            >See code</a
+            >See todo app code</a
           >
         </div>
         <div
@@ -131,7 +100,7 @@
           <a
             href="https://github.com/AmaaniL/Chat"
             class="my-5 rounded border bg-emerald-50 px-3 py-2 font-normal text-emerald-800"
-            >See code</a
+            >See chat code</a
           >
         </div>
 
@@ -139,7 +108,7 @@
           id="card4"
           class="m-5 mx-auto w-10/12 bg-emerald-950 pb-5 text-center font-bold text-white"
         >
-          <p class="text-l m-3">CLI Hospital regsitration app</p>
+          <p class="text-l m-3">CLI Hospital registration app</p>
           <img
             src="./src/img/register.png"
             alt="screenshot of registration app "
@@ -149,7 +118,7 @@
           <a
             href="https://github.com/AmaaniL/hospitalregistration"
             class="mt-5 rounded border bg-emerald-50 px-3 py-2 font-normal text-emerald-800"
-            >See code</a
+            >See hospital registration code </a
           >
         </div>
       </div>

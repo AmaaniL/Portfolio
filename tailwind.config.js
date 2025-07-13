@@ -1,25 +1,16 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  tailwindConfig: "./styles/tailwind.config.js",
   content: [
-    "./src/*.{html,js}",
+    "./src/**/*.{html,js}",
     "./*.{html,js}",
-    "./node_modules/tw-elements/dist/js/*.js",
-
+    "./node_modules/tw-elements/dist/js/**/*.js",
     "./node_modules/flowbite/**/*.js",
   ],
 
-  safelist: ["animate-[fade-in_left_1s_ease-in-out]"],
+  safelist: ["animate-slideInLeft"],
 
   theme: {
-    screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
-    },
     extend: {
       colors: {
         monokai: {
@@ -33,11 +24,29 @@ module.exports = {
           green: "#a6e22e",
         },
       },
+      keyframes: {
+        slideInLeft: {
+          "0%": { transform: "translateX(-1000px)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        slideInLeft: "slideInLeft 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both",
+      },
+    },
+
+    // Use default breakpoints + your extensions if needed
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
     },
   },
+
   plugins: [
     require("flowbite/plugin"),
-
     require("@tailwindcss/typography"),
     require("tw-elements/dist/plugin"),
   ],
